@@ -1,0 +1,52 @@
+<!-- web developer for an NGO-->
+<!--This NGO works to improve the financial literacy of the common people-->
+<!--Simple Interest Calculator App
+Feature:
+Compute the interest one can earn given the amount you wish to save
+The number of years you can keep it with the bank
+The interest rate the bank would pay you-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="application/javascript">
+        function checkdata() {
+            var username = document.getElementById("name");
+            var amoutInvested = document.getElementById("amount");
+
+            if (username.value == "") {
+                alert("Please enter the name");
+                username.focus();
+                return false;
+            }
+            //TODO validate the amount
+            if (amoutInvested.value == "") {
+                alert("Please enter the amount");
+                amoutInvested.focus();
+                return false;
+            }
+            alert("Form validation is successful.")
+            return true;
+        }
+    </script>
+    <title> IBM Training</title>
+</head>
+
+<body>
+    <h2>IBM Training</h2>
+    <h2>Simple Interest Calculator App</h2>
+    <h2>Enter your contact Details:</h2> <br>
+    <form id="form1" onsubmit="return checkdata()">
+        <label for="name">Name :</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <br>
+        <label for="amount">Amout invested :</label>
+        <input type="number" id="amount" name="amount">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+</html>
